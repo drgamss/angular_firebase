@@ -1,12 +1,18 @@
 <mat-sidenav-container>
-
-  <mat-sidenav #sidenav role="navigation">
-
-  </mat-sidenav>
+  <mat-sidenav #sidenav role="navigation"> </mat-sidenav>
 
   <mat-sidenav-content>
-    <button (click)="sidenav.toggle()">Show sidenav!</button>
-    <router-outlet></router-outlet>
+    <mat-toolbar color="primary">
+      <div><button (click)="sidenav.toggle()">Show sidenav!</button></div>
+      <div>Logo</div>
+      <div>
+        <a routerLink="/signup">Sign up</a>
+        <a routerLink="/login">login</a>
+        <a routerLink="/training">training</a>
+      </div>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
   </mat-sidenav-content>
-
 </mat-sidenav-container>
